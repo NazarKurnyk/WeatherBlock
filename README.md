@@ -53,8 +53,9 @@ A WordPress Gutenberg plugin that renders a **magazine-style layout** — one fe
 
 1. Copy the plugin directory into `wp-content/plugins/`.
 2. Run `composer install` inside the plugin directory.
-3. Run `npm install && npm run build` inside the plugin directory.
-4. Activate **Weather Block** from the WordPress admin Plugins screen.
+3. Activate **Weather Block** from the WordPress admin Plugins screen.
+
+The `build/` directory is committed, so no Node.js build step is required to use the plugin. If you want to modify the source, run `npm install && npm run build` after making changes.
 
 ---
 
