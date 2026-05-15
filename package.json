@@ -1,0 +1,44 @@
+{
+	"name": "weather-block",
+	"version": "1.0.0",
+	"description": "WordPress Gutenberg block combining post cards with a live OpenWeatherMap weather snippet.",
+	"private": true,
+	"author": "Nazar Kurnyk",
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"dev": "concurrently --names \"webpack,browsersync\" --prefix-colors \"blue,green\" \"wp-scripts start\" \"browser-sync start --proxy localhost:8080 --files 'build/**/*.js,build/**/*.css,**/*.php,!vendor/**' --port 3000 --no-open\"",
+		"test": "wp-scripts test-unit-js",
+		"test:watch": "wp-scripts test-unit-js --watch",
+		"test:coverage": "wp-scripts test-unit-js --coverage",
+		"lint:js": "wp-scripts lint-js",
+		"lint:css": "wp-scripts lint-style",
+		"lint:php": "composer run lint",
+		"format": "wp-scripts format",
+		"check": "npm run lint:js && npm run lint:css && npm run test",
+		"build:production": "npm run check && npm run build",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip"
+	},
+	"devDependencies": {
+		"@testing-library/react": "^16.0.0",
+		"@testing-library/user-event": "^14.0.0",
+		"@testing-library/jest-dom": "^6.0.0",
+		"@wordpress/scripts": "^30.0.0",
+		"browser-sync": "^3.0.0",
+		"concurrently": "^9.0.0"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "*",
+		"@wordpress/blocks": "*",
+		"@wordpress/components": "*",
+		"@wordpress/core-data": "*",
+		"@wordpress/data": "*",
+		"@wordpress/element": "*",
+		"@wordpress/html-entities": "*",
+		"@wordpress/i18n": "*",
+		"@wordpress/icons": "*",
+		"@wordpress/primitives": "*"
+	}
+}

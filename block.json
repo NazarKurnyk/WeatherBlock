@@ -1,0 +1,94 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "weather-block/weather",
+	"version": "1.0.0",
+	"title": "Weather Block",
+	"category": "widgets",
+	"icon": "grid-view",
+	"description": "Display a featured post card alongside two secondary post cards in a responsive magazine layout.",
+	"keywords": [ "posts", "cards", "magazine", "topic", "featured" ],
+	"textdomain": "weather-block",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css",
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": false
+			}
+		},
+		"color": {
+			"background": true,
+			"text": true,
+			"gradients": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		}
+	},
+	"attributes": {
+		"postIds": {
+			"type": "array",
+			"items": { "type": "integer" },
+			"default": []
+		},
+		"lat": {
+			"type": "string",
+			"default": ""
+		},
+		"lon": {
+			"type": "string",
+			"default": ""
+		},
+		"showLocation": {
+			"type": "boolean",
+			"default": true
+		},
+		"showTemperature": {
+			"type": "boolean",
+			"default": true
+		},
+		"showFeelsLike": {
+			"type": "boolean",
+			"default": true
+		},
+		"showCondition": {
+			"type": "boolean",
+			"default": true
+		},
+		"showHumidity": {
+			"type": "boolean",
+			"default": true
+		},
+		"showPressure": {
+			"type": "boolean",
+			"default": true
+		},
+		"showWindSpeed": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSunrise": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSunset": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"example": {
+		"attributes": {
+			"postIds": [],
+			"lat": "",
+			"lon": ""
+		}
+	}
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ruleset name="WeatherBlock">
+    <description>WordPress Coding Standards for Weather Block plugin.</description>
+
+    <file>weather-block.php</file>
+    <file>includes/</file>
+
+    <arg name="basepath" value="."/>
+    <arg name="colors"/>
+    <arg value="sp"/>
+    <arg name="extensions" value="php"/>
+
+    <rule ref="WordPress">
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+    </rule>
+
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array" value="weather-block"/>
+        </properties>
+    </rule>
+
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <properties>
+            <property name="prefixes" type="array" value="weather_block,WeatherBlock"/>
+        </properties>
+    </rule>
+</ruleset>

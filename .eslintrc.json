@@ -1,0 +1,20 @@
+{
+	"extends": [ "plugin:@wordpress/eslint-plugin/recommended" ],
+	"rules": {
+		"no-console": "warn"
+	},
+	"overrides": [
+		{
+			"files": [
+				"src/**/__tests__/**/*.{js,jsx}",
+				"src/**/*.test.{js,jsx}"
+			],
+			"env": {
+				"jest": true
+			},
+			"rules": {
+				"jsx-a11y/label-has-associated-control": "off"
+			}
+		}
+	]
+}
